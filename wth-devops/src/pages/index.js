@@ -1,7 +1,7 @@
 import Link from "next/link";
 import dbConnect from "../lib/dbConnect";
 import Pet from "../models/Pet";
-
+import Hours from '../components/Hours';
 // TODO: Import Hours component
 
 const Index = ({ pets }) => {
@@ -10,7 +10,12 @@ const Index = ({ pets }) => {
     <>
 
       {/* TODO: Display Hours component */}
-
+      <h1>Current Time:</h1>
+      <Hours></Hours>
+  
+  
+      {/* TODO: Display Hours component */}
+      <h2>abre de 10 a.m. a 4 p.m. de lunes a viernes, y de 9 a.m. a 8 p.m. los sábados y domingos</h2>
       {/* Create a card for each pet */}
       {pets.map((pet) => (
         <div key={pet._id}>
