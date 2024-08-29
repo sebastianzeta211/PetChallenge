@@ -2,7 +2,7 @@ import Link from "next/link";
 import dbConnect from "../lib/dbConnect";
 import Pet from "../models/Pet";
 import Hours from '../components/Hours';
-
+import myImage from '../pics/zapatacuervosebastian.png';
 // TODO: Import Hours component
 
 const Index = ({ pets }) => {
@@ -24,13 +24,7 @@ const Index = ({ pets }) => {
       </a>
     </div>
 
-    <div>
-      <img
-        src='../pics/zapatacuervosebastian.png'
-        alt="Descripción de la imagen"
-        style={{ width: '300px', height: 'auto', borderRadius: '8px' }}
-      />
-    </div>
+ 
       {/* Create a card for each pet */}
       {pets.map((pet) => (
         <div key={pet._id}>
