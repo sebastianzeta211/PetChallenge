@@ -2,7 +2,7 @@ import Link from "next/link";
 import dbConnect from "../lib/dbConnect";
 import Pet from "../models/Pet";
 import Hours from '../components/Hours';
-import myImage from '../pics/zapatacuervosebastian.png';
+
 // TODO: Import Hours component
 
 const Index = ({ pets }) => {
@@ -17,17 +17,19 @@ const Index = ({ pets }) => {
   
       {/* TODO: Display Hours component */}
       <h2>abre de 10 a.m. a 4 p.m. de lunes a viernes, y de 9 a.m. a 8 p.m. los sábados y domingos</h2>
-      <div>
-      <img
-        src={myImage}
-        alt="Descripción de la imagen"
-        style={{ width: '300px', height: 'auto', borderRadius: '8px' }}
-      />
-    </div>
+     
     <div>
       <a href="https://github.com/sebastianzeta211/PetChallenge" target="_blank" rel="noopener noreferrer">
       https://github.com/sebastianzeta211/PetChallenge Visitar repo
       </a>
+    </div>
+
+    <div>
+      <img
+        src='../pics/zapatacuervosebastian.png'
+        alt="Descripción de la imagen"
+        style={{ width: '300px', height: 'auto', borderRadius: '8px' }}
+      />
     </div>
       {/* Create a card for each pet */}
       {pets.map((pet) => (
