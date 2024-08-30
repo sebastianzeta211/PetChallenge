@@ -2,17 +2,13 @@
 import React, { useState, useEffect } from 'react';
 
 const Hours = () => {
-  const [Hours, setHours] = useState(new Date().toLocaleTimeString());
-
+  const [time, setTime] = useState('');
   useEffect(() => {
-    const timer = setInterval(() => {
-      setHours(new Date().toLocaleTimeString());
-    }, 1000);
-
-    return () => clearInterval(timer); // Cleanup the timer on component unmount
+    const currentTime = new Date().toLocaleTimeString();
+    setTime(currentTime);
   }, []);
 
-  return <div>{Hours}</div>;
+  return <span>{time}</span>;
 };
 
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import dbConnect from "../lib/dbConnect";
 import Pet from "../models/Pet";
 import Hours from '../components/Hours';
-import myImage from '../pics/zapatacuervosebastian.png';
+
 // TODO: Import Hours component
 
 const Index = ({ pets }) => {
@@ -10,21 +10,31 @@ const Index = ({ pets }) => {
   return (
     <>
 
+
+<h1>Sebastian Zapata Cuervo:</h1>
       {/* TODO: Display Hours component */}
-      <h1>Current Time:</h1>
+      
+      <p>Current Time:</p>
       <Hours></Hours>
   
   
       {/* TODO: Display Hours component */}
-      <h2>abre de 10 a.m. a 4 p.m. de lunes a viernes, y de 9 a.m. a 8 p.m. los sábados y domingos</h2>
+      <p>abre de 10 a.m. a 4 p.m. de lunes a viernes, y de 9 a.m. a 8 p.m. los sábados y domingos</p>
      
     <div>
       <a href="https://github.com/sebastianzeta211/PetChallenge" target="_blank" rel="noopener noreferrer">
-      https://github.com/sebastianzeta211/PetChallenge Visitar repo
-      </a>
+       https://github.com/sebastianzeta211/PetChallenge</a>
+    
+  
+    
     </div>
+    
+    
 
- 
+
+    <div style={{ textAlign: 'center' }}>
+    <img src="https://media.istockphoto.com/id/547056990/es/foto/el-negro-perro.jpg?s=612x612&w=0&k=20&c=k-TMg_ualP_oTfJKDoYrI7U5k_Y-KSFVTN7Iatrp0pI=" style={{ width: '50%', display: 'block', margin: '0 auto' }}  alt="Descripción de la imagen2" /> </div>
+
       {/* Create a card for each pet */}
       {pets.map((pet) => (
         <div key={pet._id}>
