@@ -1,0 +1,105 @@
+{
+  "id": "/subscriptions/c313ddb4-9040-469a-a0b6-7504efd59565/resourceGroups/pets-workshop/providers/Microsoft.App/containerapps/szc24containerapp",
+  "identity": {
+    "type": "None"
+  },
+  "location": "West US",
+  "name": "szc24containerapp",
+  "properties": {
+    "configuration": {
+      "activeRevisionsMode": "Single",
+      "dapr": null,
+      "ingress": {
+        "additionalPortMappings": null,
+        "allowInsecure": false,
+        "clientCertificateMode": null,
+        "corsPolicy": null,
+        "customDomains": null,
+        "exposedPort": 3000,
+        "external": true,
+        "fqdn": "szc24containerapp.kindsky-d0eb092d.westus.azurecontainerapps.io",
+        "ipSecurityRestrictions": null,
+        "stickySessions": null,
+        "targetPort": 3000,
+        "traffic": [
+          {
+            "revisionName": "szc24containerapp--j5hmd56",
+            "weight": 100
+          }
+        ],
+        "transport": "Auto"
+      },
+      "maxInactiveRevisions": null,
+      "registries": [
+        {
+          "identity": "",
+          "passwordSecretRef": "container-registry-password",
+          "server": "szc24acr.azurecr.io",
+          "username": "szc24acr"
+        }
+      ],
+      "secrets": [
+        {
+          "name": "container-registry-password"
+        },
+        {
+          "name": "cosmosdb-connection-string"
+        }
+      ],
+      "service": null
+    },
+    "customDomainVerificationId": "D730D67531DB048FDAC4FF0802589BD780E4E72B071B199D72900921172B0C17",
+    "delegatedIdentities": [],
+    "environmentId": "/subscriptions/c313ddb4-9040-469a-a0b6-7504efd59565/resourceGroups/pets-workshop/providers/Microsoft.App/managedEnvironments/szc24containerappenvironment",
+    "eventStreamEndpoint": "https://westus.azurecontainerapps.dev/subscriptions/c313ddb4-9040-469a-a0b6-7504efd59565/resourceGroups/pets-workshop/containerApps/szc24containerapp/eventstream",
+    "latestReadyRevisionName": "szc24containerapp--j5hmd56",
+    "latestRevisionFqdn": "szc24containerapp--j5hmd56.kindsky-d0eb092d.westus.azurecontainerapps.io",
+    "latestRevisionName": "szc24containerapp--j5hmd56",
+    "managedEnvironmentId": "/subscriptions/c313ddb4-9040-469a-a0b6-7504efd59565/resourceGroups/pets-workshop/providers/Microsoft.App/managedEnvironments/szc24containerappenvironment",
+    "outboundIpAddresses": [
+      "13.64.95.173"
+    ],
+    "provisioningState": "Succeeded",
+    "runningStatus": "Running",
+    "template": {
+      "containers": [
+        {
+          "env": [
+            {
+              "name": "MONGODB_URI",
+              "secretRef": "cosmosdb-connection-string"
+            }
+          ],
+          "image": "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest",
+          "name": "szc24containerapp",
+          "resources": {
+            "cpu": 0.5,
+            "ephemeralStorage": "2Gi",
+            "memory": "1Gi"
+          }
+        }
+      ],
+      "initContainers": null,
+      "revisionSuffix": "",
+      "scale": {
+        "maxReplicas": 10,
+        "minReplicas": null,
+        "rules": null
+      },
+      "serviceBinds": null,
+      "terminationGracePeriodSeconds": null,
+      "volumes": null
+    },
+    "workloadProfileName": null
+  },
+  "resourceGroup": "pets-workshop",
+  "systemData": {
+    "createdAt": "2024-08-31T03:32:31.5288194",
+    "createdBy": "e5b3829b-72e9-4c68-914c-5e3d6051d58d",
+    "createdByType": "Application",
+    "lastModifiedAt": "2024-09-08T04:22:58.8629438",
+    "lastModifiedBy": "zapatacuervosebastian@outlook.com",
+    "lastModifiedByType": "User"
+  },
+  "type": "Microsoft.App/containerApps"
+}
