@@ -98,7 +98,7 @@ resource conatinerAppEnvironment 'Microsoft.App/managedEnvironments@2022-03-01' 
   }
 }
 
-// Cuando ya hagas el deploy de tu app recuerda cambiar el targetPort a: 8080
+// Cuando ya hagas el deploy de tu app recuerda cambiar el targetPort a: 3000
 
 resource containerApp 'Microsoft.App/containerApps@2022-03-01' = {
   name: '${namePrefix}containerapp'
@@ -108,7 +108,8 @@ resource containerApp 'Microsoft.App/containerApps@2022-03-01' = {
     configuration: {
       ingress: {
         external: true
-        targetPort: 3000
+        targetPort: 8080
+        exposedPort: 80
         allowInsecure: false
         traffic: [
           {
