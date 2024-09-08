@@ -2,8 +2,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "main":"index.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node /src/pages/index.js",
     "cypress:headless": "cypress run",
     "test": "start-server-and-test start http://localhost:3000 cypress:headless"
   },
